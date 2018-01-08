@@ -1,0 +1,3 @@
+- gitclone
+- npm rebuild
+- npm start
