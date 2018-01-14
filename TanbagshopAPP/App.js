@@ -23,15 +23,21 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <View style={styles.header}>
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+        </View>
+        <View style={styles.content}>
+          <Text style={styles.instructions}>
+            To get started, edit App.js
+          </Text>  
+        </View>
+        <View style={styles.footer}>
+          <Text style={styles.instructions}>
+            {instructions}
+          </Text>
+        </View>
       </View>
     );
   }
@@ -43,6 +49,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  header: {
+    paddingTop: Platform.OS === "ios" ? 20 : 0,
+    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: 'blue'
+  },
+  content:{
+    flex: 10,
+    backgroundColor: 'yellow'
+  },
+  footer: {
+    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: 'green'
   },
   welcome: {
     fontSize: 20,
