@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,6 +5,10 @@ import {
   Text,
   View
 } from 'react-native';
+import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+import Header from './src/components/header';
+import Footer from './src/components/Footer';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -19,59 +17,40 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
+class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-        </View>
-        <View style={styles.content}>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>  
-        </View>
-        <View style={styles.footer}>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
-        </View>
-      </View>
+        <BottomNavigation
+        labelColor="white"
+        rippleColor="white"
+        style={{ height: 56, elevation: 8, position: 'absolute', left: 0, bottom: 0, right: 0 }}
+        onTabChange={(newTabIndex) => alert(`New Tab at position ${newTabIndex}`)}
+      >
+        <Tab
+          barBackgroundColor="#37474F"
+          label="Movies & TV"
+          icon={<Icon size={24} color="white" name="tv" />}
+        />
+        <Tab
+          barBackgroundColor="#00796B"
+          label="Music"
+          icon={<Icon size={24} color="white" name="music-note" />}
+        />
+        <Tab
+          barBackgroundColor="#5D4037"
+          label="Books"
+          icon={<Icon size={24} color="white" name="book" />}
+        />
+        <Tab
+          barBackgroundColor="#3E2723"
+          label="Newsstand"
+          icon={<Icon size={24} color="white" name="newspaper" />}
+        />
+      </BottomNavigation>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-    alignItems: "stretch"
-  },
-  header: {
-    paddingTop: Platform.OS === "ios" ? 20 : 0,
-    justifyContent: 'center',
-    flex: 1,
-    backgroundColor: 'blue'
-  },
-  content:{
-    flex: 10,
-    backgroundColor: 'yellow'
-  },
-  footer: {
-    justifyContent: 'center',
-    flex: 1,
-    backgroundColor: 'green'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
+
+export default App;
