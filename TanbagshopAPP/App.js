@@ -8,6 +8,7 @@ import {
 import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Header from './src/components/header';
+import Body from './src/components/Body';
 import Footer from './src/components/Footer';
 
 const instructions = Platform.select({
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
         <View style={styles.mainApp}>
           <Header headerText='hello'/>
+          <Body />
           <Footer />
         </View>
     );
