@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import EvilIcon from 'react-native-vector-icons/EvilIcons'
 import propTypes from 'prop-types';
 import { Text, View } from 'react-native';
  
@@ -10,28 +12,28 @@ class Footer extends React.Component {
             <BottomNavigation
             labelColor="white"
             rippleColor="white"
-            style={{height: 56, position: 'absolute', bottom: 0, alignItems:"flex-end"}}
+            style={{ height: 56, elevation: 8, position: 'absolute', left: 0, bottom: 0, right: 0 }}
             onTabChange={(newTabIndex) => alert(`New Tab at position ${newTabIndex}`)}
             >
             <Tab
-              barBackgroundColor='#37474F'
-              label='Movies & TV'
-              icon={<Icon size={24} color='white' name='tv' />}
-            />
-            <Tab
               barBackgroundColor='#00796B'
-              label='Music'
-              icon={<Icon size={24} color='white' name='music-note' />}
+              label='Browse'
+              icon={<FontAwesome size={24} color='white' name='heart-o' />}
             />
             <Tab
               barBackgroundColor='#5D4037'
-              label='Books'
-              icon={<Icon size={24} color='white' name='book' />}
+              label='Discount'
+              icon={<FontAwesome size={24} color='white' name='tag' />}
+            />
+            <Tab
+              barBackgroundColor='#37474F'
+              label='Cart'
+              icon={<EvilIcon size={24} color='white' name='cart' />}
             />
             <Tab
               barBackgroundColor='#3E2723'
-              label='Newsstand'
-              icon={<Icon size={24} color='white' name='access-alarm' />}
+              label='Account'
+              icon={<Icon size={24} color='white' name='account-circle' />}
             />
           </BottomNavigation>
         );
