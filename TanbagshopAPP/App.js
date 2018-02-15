@@ -2,43 +2,36 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
-import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import Header from './src/components/header';
-import Body from './src/components/Body';
-import Footer from './src/components/Footer';
+import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
+import store from './src/store/store.js';
+import Header from './src/components/Header.js';
+import Footer from './src/components/Footer.js';
+import CounterContainer from './src/containers/CounterContainer.js';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 class App extends React.Component {
   render() {
     return (
+      <Provider store={store}>
         <View style={styles.mainApp}>
-          <Header headerText='hello'/>
-          <Body />
+          <Header headerText="Tan"/>
+          <CounterContainer />
           <Footer />
         </View>
+      </Provider>
     );
   }
 }
-const styles = {
+const styles = StyleSheet.create({
   mainApp: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  textStyle: {
-    fontSize: 20
+    justifyContent: 'flex-start',
   }
-};
+});
 
 
 export default App;
