@@ -7,7 +7,7 @@ import {
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import store from './src/store/store.js';
-import Header from './src/components/header.js';
+import Header from './src/components/Header.js';
 import Footer from './src/components/Footer.js';
 import CounterContainer from './src/containers/CounterContainer.js';
 
