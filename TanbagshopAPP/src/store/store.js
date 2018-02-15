@@ -8,6 +8,18 @@ export const counter = (state = 0, action) => {
     return state - 1;
   case 'RESET':
     return 0;
+  case 'BROWSE':
+    state = 11;
+    return state;
+  case 'DISCOUNT':
+    state = 12;
+    return state;
+  case 'DISCOUNT':
+    state = 13;
+    return state;
+  case 'ACCOUNT':
+    state = 14;
+    return state;
   default:
     return state;
   }

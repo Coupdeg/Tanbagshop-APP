@@ -11,7 +11,7 @@ class Body extends Component {
     super(props);
     this.state = {isShowingText: true};
   }
-  _renderBody = () =>{
+  _renderBody = () => {
     if (this.state.isShowingText) {
       return (
         <View>
@@ -22,7 +22,7 @@ class Body extends Component {
         <Text
           style={styles.counter}
           onPress={this.props.reset}>
-          {this.props.count}
+          {this.props.state}
         </Text>
         <Button
           title="Down"
