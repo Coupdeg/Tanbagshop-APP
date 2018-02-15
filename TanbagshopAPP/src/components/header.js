@@ -9,7 +9,6 @@ import {
   Text,
   StatusBar
 } from 'react-native';
-import { Button } from 'react-native-elements';
 import propTypes from 'prop-types';
 import SearchHeader from 'react-native-search-header';
 import Icon from 'react-native-vector-icons/MaterialIcons'

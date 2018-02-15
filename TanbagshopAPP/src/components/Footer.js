@@ -3,7 +3,6 @@ import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import EvilIcon from 'react-native-vector-icons/EvilIcons'
-import propTypes from 'prop-types';
 import { Text, View } from 'react-native';
  
 class Footer extends React.Component {
