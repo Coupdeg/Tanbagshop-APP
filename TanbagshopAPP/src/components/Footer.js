@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import EvilIcon from 'react-native-vector-icons/EvilIcons'
-import { Text, View } from 'react-native';
  
-class Footer extends React.Component {
+class Footer extends Component {
   constructor(props) {
     super(props);
   }
   _renderBody = (newTabIndex) => {
     switch (newTabIndex) {
       case 0:
-      this.props.browse;
+        this.props.browse();
+        break;
       case 1:
-      this.props.discount;
+        this.props.discount();
+        break;
       case 2:
-      this.props.cart;
+        this.props.cart();
+        break;
       case 3:
-      this.props.account;
+        this.props.account();
+        break;
+
     }
   }
   render() {
@@ -67,4 +74,18 @@ const styles = {
   }
 };
 
-export default Footer;
+const mapStateToProps = (state) => ({
+  count: state
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  increment: () => { dispatch({ type: 'INCREMENT' }) },
+  decrement: () => { dispatch({ type: 'DECREMENT' }) },
+  reset: () => { dispatch({ type: 'RESET' }) },
+  browse: () => { dispatch({ type: 'BROWSE' }) },
+  discount: () => { dispatch({ type: 'DISCOUNT' }) },
+  cart: () => { dispatch({ type: 'CART' }) },
+  account: () => { dispatch({ type: 'ACCOUNT' }) },
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

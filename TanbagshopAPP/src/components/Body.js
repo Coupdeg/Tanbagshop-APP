@@ -5,6 +5,8 @@ import {
     Text,
     View,
   } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
  
 class Body extends Component {
   constructor(props) {
@@ -22,7 +24,7 @@ class Body extends Component {
         <Text
           style={styles.counter}
           onPress={this.props.reset}>
-          {this.props.state}
+          {this.props.count}
         </Text>
         <Button
           title="Down"
@@ -64,4 +66,18 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Body;
+const mapStateToProps = (state) => ({
+  count: state
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  increment: () => { dispatch({ type: 'INCREMENT' }) },
+  decrement: () => { dispatch({ type: 'DECREMENT' }) },
+  reset: () => { dispatch({ type: 'RESET' }) },
+  browse: () => { dispatch({ type: 'BROWSE' }) },
+  discount: () => { dispatch({ type: 'DISCOUNT' }) },
+  cart: () => { dispatch({ type: 'CART' }) },
+  account: () => { dispatch({ type: 'ACCOUNT' }) },
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Body);

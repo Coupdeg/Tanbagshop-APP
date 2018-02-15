@@ -8,8 +8,7 @@ import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import store from './src/store/store.js';
 import Header from './src/components/Header.js';
-import FooterContainer from './src/containers/FooterContainer.js';
-import CounterContainer from './src/containers/CounterContainer.js';
+import Below from './src/components/Below.js';
 
 
 class App extends React.Component {
@@ -18,8 +17,7 @@ class App extends React.Component {
       <Provider store={store}>
         <View style={styles.mainApp}>
           <Header headerText="Tan"/>
-          <CounterContainer />
-          <FooterContainer />
+          <Below />
         </View>
       </Provider>
     );
@@ -32,6 +30,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   }
 });
-
 
 export default App;
