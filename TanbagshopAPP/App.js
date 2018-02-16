@@ -8,7 +8,8 @@ import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import store from './src/store/store.js';
 import Header from './src/components/Header.js';
-import Below from './src/components/Below.js';
+import Footer from './src/components/Footer.js';
+import CounterContainer from './src/containers/CounterContainer.js';
 
 
 class App extends React.Component {
@@ -17,7 +18,8 @@ class App extends React.Component {
       <Provider store={store}>
         <View style={styles.mainApp}>
           <Header headerText="Tan"/>
-          <Below />
+          <CounterContainer />
+          <Footer />
         </View>
       </Provider>
     );

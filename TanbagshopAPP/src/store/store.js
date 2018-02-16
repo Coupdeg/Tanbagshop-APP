@@ -11,19 +11,15 @@ export const counter = (state = 0, action) => {
     return 0;
   case 'BROWSE':
     state = 11;
-    console.log(state);
     return state;
   case 'DISCOUNT':
     state = 12;
-    console.log(state);
     return state;
-  case 'DISCOUNT':
+  case 'CART':
     state = 13;
-    console.log(state);
     return state;
   case 'ACCOUNT':
     state = 14;
-    console.log(state);
     return state;
   default:
     return state;
