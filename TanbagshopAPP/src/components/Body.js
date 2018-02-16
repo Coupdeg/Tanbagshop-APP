@@ -5,6 +5,10 @@ import {
     Text,
     View,
   } from 'react-native';
+import Browse from './Browse.js';
+import Discount from './Discount.js';
+import Cart from './Cart.js';
+import Account from './Account.js';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
  
@@ -38,43 +42,35 @@ class Body extends Component {
     switch (this.props.page){
       case 1:
         return(
-          <Text> 
-            browse
-          </Text>
+          <Browse />
         );
       case 2:
         return(
-          <Text> 
-            discount
-          </Text>
+          <Discount />
         );
       case 3:
         return(
-          <Text> 
-            cart
-          </Text>
+          <Cart />
         );
       case 4:
         return(
-          <Text> 
-            account
-          </Text>
+          <Account />
         );
     }
   }
-  toggleShow = () => {
+  /*toggleShow = () => {
     this.setState({
       isShowingText: !this.state.isShowingText
     });
-  }
+  }*/
   render() {
     return (
       <View style = {styles.body}>
         {this._renderBody()}
-        <Button
+        {/*<Button
           title="Show"
           onPress={this.toggleShow}
-        />
+        />*/}
       </View>
     );
   }
@@ -87,7 +83,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   body: {
-    paddingTop: 200,
     alignSelf: 'center',
   }
 });
