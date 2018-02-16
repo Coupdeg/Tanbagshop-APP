@@ -75,9 +75,6 @@ const styles = {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => { dispatch({ type: 'INCREMENT' }) },
-  decrement: () => { dispatch({ type: 'DECREMENT' }) },
-  reset: () => { dispatch({ type: 'RESET' }) },
   browse: () => { dispatch({ type: 'BROWSE' }) },
   discount: () => { dispatch({ type: 'DISCOUNT' }) },
   cart: () => { dispatch({ type: 'CART' }) },

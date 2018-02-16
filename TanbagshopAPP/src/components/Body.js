@@ -14,7 +14,7 @@ class Body extends Component {
     this.state = {isShowingText: true};
   }
   _renderBody = () => {
-    if (this.state.isShowingText) {
+    {/*if (this.state.isShowingText) {
       return (
         <View>
         <Button
@@ -34,6 +34,32 @@ class Body extends Component {
       );
     } else {
         return null;
+    }*/}
+    switch (this.props.page){
+      case 1:
+        return(
+          <Text> 
+            browse
+          </Text>
+        );
+      case 2:
+        return(
+          <Text> 
+            discount
+          </Text>
+        );
+      case 3:
+        return(
+          <Text> 
+            cart
+          </Text>
+        );
+      case 4:
+        return(
+          <Text> 
+            account
+          </Text>
+        );
     }
   }
   toggleShow = () => {
@@ -55,29 +81,19 @@ class Body extends Component {
 }
 
 const styles = StyleSheet.create({
-  counter: {
+  page: {
     padding: 0,
-    alignSelf: 'center',
     fontSize: 26,
     fontWeight: 'bold',
   },
   body: {
     paddingTop: 200,
+    alignSelf: 'center',
   }
 });
 
 const mapStateToProps = (state) => ({
-  count: state
+  page: state
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  increment: () => { dispatch({ type: 'INCREMENT' }) },
-  decrement: () => { dispatch({ type: 'DECREMENT' }) },
-  reset: () => { dispatch({ type: 'RESET' }) },
-  browse: () => { dispatch({ type: 'BROWSE' }) },
-  discount: () => { dispatch({ type: 'DISCOUNT' }) },
-  cart: () => { dispatch({ type: 'CART' }) },
-  account: () => { dispatch({ type: 'ACCOUNT' }) },
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Body);
+export default connect(mapStateToProps, null)(Body);
