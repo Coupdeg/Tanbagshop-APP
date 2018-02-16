@@ -5,14 +5,20 @@ import {
     Text,
     View,
   } from 'react-native';
+import Browse from './Browse.js';
+import Discount from './Discount.js';
+import Cart from './Cart.js';
+import Account from './Account.js';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
  
 class Body extends Component {
   constructor(props) {
     super(props);
     this.state = {isShowingText: true};
   }
-  _renderBody = () =>{
-    if (this.state.isShowingText) {
+  _renderBody = () => {
+    {/*if (this.state.isShowingText) {
       return (
         <View>
         <Button
@@ -32,36 +38,57 @@ class Body extends Component {
       );
     } else {
         return null;
+    }*/}
+    switch (this.props.page){
+      case 1:
+        return(
+          <Browse />
+        );
+      case 2:
+        return(
+          <Discount />
+        );
+      case 3:
+        return(
+          <Cart />
+        );
+      case 4:
+        return(
+          <Account />
+        );
     }
   }
-  toggleShow = () => {
+  /*toggleShow = () => {
     this.setState({
       isShowingText: !this.state.isShowingText
     });
-  }
+  }*/
   render() {
     return (
       <View style = {styles.body}>
         {this._renderBody()}
-        <Button
+        {/*<Button
           title="Show"
           onPress={this.toggleShow}
-        />
+        />*/}
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  counter: {
+  page: {
     padding: 0,
-    alignSelf: 'center',
     fontSize: 26,
     fontWeight: 'bold',
   },
   body: {
-    paddingTop: 200,
+    alignSelf: 'center',
   }
 });
 
-export default Body;
+const mapStateToProps = (state) => ({
+  page: state
+})
+
+export default connect(mapStateToProps, null)(Body);

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import Body from '../components/Body.js';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   count: state
 })
 

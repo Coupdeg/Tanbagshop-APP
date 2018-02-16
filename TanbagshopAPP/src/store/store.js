@@ -1,18 +1,24 @@
 import { createStore } from 'redux'
-
-export const counter = (state = 0, action) => {
+//store
+export const counter = (state = 1, action) => {
   switch (action.type) {
-  case 'INCREMENT':
-    return state + 1;
-  case 'DECREMENT':
-    return state - 1;
-  case 'RESET':
-    return 0;
+  case 'BROWSE':
+    state = 1;
+    return state;
+  case 'DISCOUNT':
+    state = 2;
+    return state;
+  case 'CART':
+    state = 3;
+    return state;
+  case 'ACCOUNT':
+    state = 4;
+    return state;
   default:
     return state;
   }
 }
-
+//reducer
 let store = createStore(counter);
 
 export default store;
