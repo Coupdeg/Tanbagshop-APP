@@ -75,10 +75,11 @@ const styles = {
 };
 
 const mapDispatchToProps = (dispatch) => ({
+  //action
   browse: () => { dispatch({ type: 'BROWSE' }) },
   discount: () => { dispatch({ type: 'DISCOUNT' }) },
   cart: () => { dispatch({ type: 'CART' }) },
   account: () => { dispatch({ type: 'ACCOUNT' }) },
 })
-
+//bindActionAndComponents
 export default connect(null, mapDispatchToProps)(Footer);

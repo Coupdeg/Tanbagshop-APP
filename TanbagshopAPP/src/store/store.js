@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-
+//store
 export const counter = (state = 1, action) => {
   switch (action.type) {
   case 'BROWSE':
@@ -18,7 +18,7 @@ export const counter = (state = 1, action) => {
     return state;
   }
 }
-
+//reducer
 let store = createStore(counter);
 
 export default store;
