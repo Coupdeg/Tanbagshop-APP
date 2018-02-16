@@ -74,10 +74,6 @@ const styles = {
   }
 };
 
-const mapStateToProps = (state) => ({
-  count: state
-})
-
 const mapDispatchToProps = (dispatch) => ({
   increment: () => { dispatch({ type: 'INCREMENT' }) },
   decrement: () => { dispatch({ type: 'DECREMENT' }) },
@@ -88,4 +84,4 @@ const mapDispatchToProps = (dispatch) => ({
   account: () => { dispatch({ type: 'ACCOUNT' }) },
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Footer);
+export default connect(null, mapDispatchToProps)(Footer);
