@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  View
+  View,
+  FlatList
 } from 'react-native';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
-import store from './src/store/store.js';
-import Header from './src/components/header.js';
+import Store from './src/store/Store.js';
+import Header from './src/components/Header.js';
 import Footer from './src/components/Footer.js';
 import CounterContainer from './src/containers/CounterContainer.js';
 
@@ -15,7 +16,7 @@ import CounterContainer from './src/containers/CounterContainer.js';
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={Store}>
         <View style={styles.mainApp}>
           <Header headerText="Tan"/>
           <CounterContainer />

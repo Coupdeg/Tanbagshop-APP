@@ -19,6 +19,6 @@ export const counter = (state = 1, action) => {
   }
 }
 //reducer
-let store = createStore(counter);
+let Store = createStore(counter);
 
-export default store;
+export default Store;

@@ -49,6 +49,8 @@
 		FEA1913FC2E3471CAFBAFEA4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90B35D2CB5AA4876AB26E86F /* SimpleLineIcons.ttf */; };
 		242AC28625884A8DA5425E0E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC55970533C40A5B96D769F /* Zocial.ttf */; };
 		760FEDFA38B5442B88E6E0CD /* libRNSearchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E43E6176E7449248AD3DDF3 /* libRNSearchBar.a */; };
+		9B16302A53604BD5A4F4C398 /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AA52883BACE4DA783B9FDF3 /* Cookie-Regular.ttf */; };
+		A6CDA44B46BB461C87F46D51 /* Cookie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEB02A492E740E1B9E3DF1E /* Cookie.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,6 +371,8 @@
 		0CC55970533C40A5B96D769F /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		51E218BFDE2C4C9CAA19F709 /* RNSearchBar.xcodeproj */ = {isa = PBXFileReference; name = "RNSearchBar.xcodeproj"; path = "../node_modules/react-native-search-bar/ios/RNSearchBar.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		1E43E6176E7449248AD3DDF3 /* libRNSearchBar.a */ = {isa = PBXFileReference; name = "libRNSearchBar.a"; path = "libRNSearchBar.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6AA52883BACE4DA783B9FDF3 /* Cookie-Regular.ttf */ = {isa = PBXFileReference; name = "Cookie-Regular.ttf"; path = "../assets/fonts/Cookie-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FEEB02A492E740E1B9E3DF1E /* Cookie.ttf */ = {isa = PBXFileReference; name = "Cookie.ttf"; path = "../assets/fonts/Cookie.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +652,8 @@
 				75199C18968C4CE9BF79B337 /* Octicons.ttf */,
 				90B35D2CB5AA4876AB26E86F /* SimpleLineIcons.ttf */,
 				0CC55970533C40A5B96D769F /* Zocial.ttf */,
+				6AA52883BACE4DA783B9FDF3 /* Cookie-Regular.ttf */,
+				FEEB02A492E740E1B9E3DF1E /* Cookie.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1113,6 +1119,8 @@
 				2253A6516A3548399BF5E284 /* Octicons.ttf in Resources */,
 				FEA1913FC2E3471CAFBAFEA4 /* SimpleLineIcons.ttf in Resources */,
 				242AC28625884A8DA5425E0E /* Zocial.ttf in Resources */,
+				9B16302A53604BD5A4F4C398 /* Cookie-Regular.ttf in Resources */,
+				A6CDA44B46BB461C87F46D51 /* Cookie.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,7 +71,7 @@ const styles = {
   },
   textStyle: {
     fontSize: 20
-  }
+  },
 };
 
 const mapDispatchToProps = (dispatch) => ({
