@@ -13,6 +13,7 @@ import {
 import propTypes from 'prop-types';
 import SearchHeader from 'react-native-search-header';
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import { Fonts } from '../utils/Fonts'
  
 // สร้าง Component
 class Header extends React.Component {
@@ -88,7 +89,6 @@ const styles = StyleSheet.create({
     borderLeftWidth: 125,
     color: '#000000',
     backgroundColor: 'transparent',
-    fontFamily: 'Cookie'
   },
   logo:{
     width: 65,
