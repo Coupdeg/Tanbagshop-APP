@@ -9,6 +9,11 @@ import CartTab from './AppTabNavigator/CartTab'
 import AccountTab from './AppTabNavigator/AccountTab'
 
 export default class componentName extends Component {
+
+  static navigationOptions = {
+    header: null,
+  }
+
   render() {
     return (
       <AppTabNavigator />
